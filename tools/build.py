@@ -198,7 +198,7 @@ def home_en():
       <article class="card on-dark"><h3>Built locally</h3><p>Each site is set up with local partners, through a local joint venture or business network, so the cost of switching it on becomes local work and training.</p></article>
       <article class="card on-dark"><h3>Long horizons</h3><p>Service agreements run for years, not weeks. What we offer is a network and the continuity that keeps it reliable.</p></article>
       <article class="card on-dark"><h3>Data stays local</h3><p>We do not sell data. Local authorities keep control of what is measured on their land.</p></article>
-      <article class="card on-dark"><h3>A profession for the valley</h3><p>Running a network takes hydraulics, electronics and geomatics. We want to grow that skill set locally, with schools, universities and training bodies, as a new Alpine profession: the <em>custode del territorio</em>. <a href="/next-generation/">Read more</a></p></article>
+      <article class="card on-dark"><h3>A profession for the valley</h3><p>Running a network takes hydraulics, electronics and geomatics. We want to grow that skill set locally, with schools, universities and training bodies, as a new Alpine profession: the territory steward. <a href="/next-generation/">Read more</a></p></article>
     </div>
   </div>
 </section>
@@ -485,7 +485,7 @@ def partner_en():
     <div class="cols four">
       <article class="card"><span class="num">01</span><h3>Territories</h3><p>For municipalities, national parks, civil protection bodies, mountain communities and operators of roads, water or hydropower who want to see slope movement before it becomes an emergency.</p></article>
       <article class="card"><span class="num">02</span><h3>Technology partners</h3><p>For sensor makers, satellite data providers and modelling specialists who want their work to run inside a real territorial network, with a clear role and clear terms.</p></article>
-      <article class="card"><span class="num">03</span><h3>Schools, universities and training bodies</h3><p>For technical schools, universities and vocational training bodies that want to build the pathway for the <em>custode del territorio</em> and teach on live sites. <a href="/next-generation/">About the pathway</a></p></article>
+      <article class="card"><span class="num">03</span><h3>Schools, universities and training bodies</h3><p>For technical schools, universities and vocational training bodies that want to build the pathway for the territory steward and teach on live sites. <a href="/next-generation/">About the pathway</a></p></article>
       <article class="card"><span class="num">04</span><h3>Funders and local partners</h3><p>For public funding programmes, foundations, investors and local development bodies interested in long-term environmental infrastructure. Conversations run through Fab Campaigns.</p></article>
     </div>
   </div>
@@ -570,14 +570,14 @@ def partner_it():
 def next_en():
     return {
         "title": "Next Generation | Smart Mountains",
-        "desc": "A path for a new Alpine profession, the custode del territorio, built with schools, universities and training bodies so young people can look after their own valleys.",
+        "desc": "A path for a new Alpine profession, the territory steward, built with schools, universities and training bodies so young people can look after their own valleys.",
         "hero": """
 <header class="page-hero">
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">Next generation</p>
     <h1>No single career path leads to looking after an Alpine slope.</h1>
-    <p class="lede">Hydraulics, electronics and geomatics are taught, and employed, in separate places. Valleys need people who bring them together, and young people who would like to stay need a reason and a route to do it. Smart Mountains is designing that route: a new Alpine profession, the <em>custode del territorio</em>.</p>
+    <p class="lede">Hydraulics, electronics and geomatics are taught, and employed, in separate places. Valleys need people who bring them together, and young people who would like to stay need a reason and a route to do it. Smart Mountains is designing that route: a new Alpine profession, the territory steward.</p>
   </div>
 </header>""",
         "body": """
@@ -585,7 +585,7 @@ def next_en():
   <div class="wrap split">
     <div>
       <p class="kicker">The profession</p>
-      <h2>The <em>custode del territorio</em></h2>
+      <h2>The territory steward</h2>
       <p>One person who can walk a slope, read what the instruments say about it, and keep those instruments working. The role joins three disciplines that are usually taught and employed apart.</p>
     </div>
     <p class="pull">Someone from the valley, trained to look after it.</p>
