@@ -119,7 +119,7 @@ T = {
     "en": {
         "lang": "en",
         "home_url": "/",
-        "nav": [("/", "Home"), ("/about/", "About"), ("/partner-with-us/", "Partner With Us")],
+        "nav": [("/", "Home"), ("/about/", "About"), ("/next-generation/", "Next Generation"), ("/partner-with-us/", "Partner With Us")],
         "other_label": "Italiano",
         "other_code": "IT",
         "skip": "Skip to content",
@@ -133,7 +133,7 @@ T = {
     "it": {
         "lang": "it",
         "home_url": "/it/",
-        "nav": [("/it/", "Home"), ("/it/chi-siamo/", "Chi siamo"), ("/it/partner/", "Collabora")],
+        "nav": [("/it/", "Home"), ("/it/chi-siamo/", "Chi siamo"), ("/it/nuova-generazione/", "Nuova generazione"), ("/it/partner/", "Collabora")],
         "other_label": "English",
         "other_code": "EN",
         "skip": "Vai al contenuto",
@@ -198,7 +198,7 @@ def home_en():
       <article class="card on-dark"><h3>Built locally</h3><p>Each site is set up with local partners, through a local joint venture or business network, so the cost of switching it on becomes local work and training.</p></article>
       <article class="card on-dark"><h3>Long horizons</h3><p>Service agreements run for years, not weeks. What we offer is a network and the continuity that keeps it reliable.</p></article>
       <article class="card on-dark"><h3>Data stays local</h3><p>We do not sell data. Local authorities keep control of what is measured on their land.</p></article>
-      <article class="card on-dark"><h3>A profession for the valley</h3><p>Running a network takes hydraulics, electronics and geomatics. We want to grow that skill set locally, with schools, universities and training bodies, as a new Alpine profession: the <em>custode del territorio</em>.</p></article>
+      <article class="card on-dark"><h3>A profession for the valley</h3><p>Running a network takes hydraulics, electronics and geomatics. We want to grow that skill set locally, with schools, universities and training bodies, as a new Alpine profession: the <em>custode del territorio</em>. <a href="/next-generation/">Read more</a></p></article>
     </div>
   </div>
 </section>
@@ -283,7 +283,7 @@ def home_it():
       <article class="card on-dark"><h3>Costruita sul posto</h3><p>Ogni sito nasce con partner locali, attraverso una joint venture o una rete d’impresa, così il costo di attivazione diventa lavoro e formazione sul territorio.</p></article>
       <article class="card on-dark"><h3>Orizzonti lunghi</h3><p>I contratti di servizio durano anni, non settimane. Offriamo una rete e la continuità che la mantiene affidabile.</p></article>
       <article class="card on-dark"><h3>I dati restano locali</h3><p>Non vendiamo dati. Le amministrazioni locali mantengono il controllo di ciò che si misura sul loro territorio.</p></article>
-      <article class="card on-dark"><h3>Un mestiere per la valle</h3><p>Gestire una rete richiede idraulica, elettronica e geomatica. Vogliamo far crescere queste competenze sul posto, con scuole, università ed enti di formazione, come nuovo mestiere alpino: il <em>custode del territorio</em>.</p></article>
+      <article class="card on-dark"><h3>Un mestiere per la valle</h3><p>Gestire una rete richiede idraulica, elettronica e geomatica. Vogliamo far crescere queste competenze sul posto, con scuole, università ed enti di formazione, come nuovo mestiere alpino: il <em>custode del territorio</em>. <a href="/it/nuova-generazione/">Approfondisci</a></p></article>
     </div>
   </div>
 </section>
@@ -481,11 +481,12 @@ def partner_en():
 <section>
   <div class="wrap">
     <p class="kicker">Ways to work together</p>
-    <h2>Three ways in</h2>
-    <div class="cols">
+    <h2>Four ways in</h2>
+    <div class="cols four">
       <article class="card"><span class="num">01</span><h3>Territories</h3><p>For municipalities, national parks, civil protection bodies, mountain communities and operators of roads, water or hydropower who want to see slope movement before it becomes an emergency.</p></article>
       <article class="card"><span class="num">02</span><h3>Technology partners</h3><p>For sensor makers, satellite data providers and modelling specialists who want their work to run inside a real territorial network, with a clear role and clear terms.</p></article>
-      <article class="card"><span class="num">03</span><h3>Funders and local partners</h3><p>For public funding programmes, foundations, investors and local development bodies interested in long-term environmental infrastructure. Conversations run through Fab Campaigns.</p></article>
+      <article class="card"><span class="num">03</span><h3>Schools, universities and training bodies</h3><p>For technical schools, universities and vocational training bodies that want to build the pathway for the <em>custode del territorio</em> and teach on live sites. <a href="/next-generation/">About the pathway</a></p></article>
+      <article class="card"><span class="num">04</span><h3>Funders and local partners</h3><p>For public funding programmes, foundations, investors and local development bodies interested in long-term environmental infrastructure. Conversations run through Fab Campaigns.</p></article>
     </div>
   </div>
 </section>
@@ -531,11 +532,12 @@ def partner_it():
 <section>
   <div class="wrap">
     <p class="kicker">Come lavorare insieme</p>
-    <h2>Tre modi per iniziare</h2>
-    <div class="cols">
+    <h2>Quattro modi per iniziare</h2>
+    <div class="cols four">
       <article class="card"><span class="num">01</span><h3>Territori</h3><p>Per comuni, parchi nazionali, enti di protezione civile, comunità montane e gestori di strade, acqua o idroelettrico che vogliono vedere il movimento dei versanti prima che diventi un’emergenza.</p></article>
       <article class="card"><span class="num">02</span><h3>Partner tecnologici</h3><p>Per produttori di sensori, fornitori di dati satellitari e specialisti di modellistica che vogliono far lavorare il proprio contributo dentro una rete territoriale reale, con un ruolo e condizioni chiari.</p></article>
-      <article class="card"><span class="num">03</span><h3>Finanziatori e partner locali</h3><p>Per programmi di finanziamento pubblico, fondazioni, investitori e agenzie di sviluppo locale interessati a infrastrutture ambientali di lungo periodo. Le conversazioni passano da Fab Campaigns.</p></article>
+      <article class="card"><span class="num">03</span><h3>Scuole, università ed enti di formazione</h3><p>Per istituti tecnici, università ed enti di formazione professionale che vogliono costruire il percorso del <em>custode del territorio</em> e insegnare su siti attivi. <a href="/it/nuova-generazione/">Il percorso</a></p></article>
+      <article class="card"><span class="num">04</span><h3>Finanziatori e partner locali</h3><p>Per programmi di finanziamento pubblico, fondazioni, investitori e agenzie di sviluppo locale interessati a infrastrutture ambientali di lungo periodo. Le conversazioni passano da Fab Campaigns.</p></article>
     </div>
   </div>
 </section>
@@ -564,19 +566,160 @@ def partner_it():
     }
 
 
+
+def next_en():
+    return {
+        "title": "Next Generation | Smart Mountains",
+        "desc": "A path for a new Alpine profession, the custode del territorio, built with schools, universities and training bodies so young people can look after their own valleys.",
+        "hero": """
+<header class="page-hero">
+  %(contours)s
+  <div class="wrap">
+    <p class="eyebrow">Next generation</p>
+    <h1>No single career path leads to looking after an Alpine slope.</h1>
+    <p class="lede">Hydraulics, electronics and geomatics are taught, and employed, in separate places. Valleys need people who bring them together, and young people who would like to stay need a reason and a route to do it. Smart Mountains is designing that route: a new Alpine profession, the <em>custode del territorio</em>.</p>
+  </div>
+</header>""",
+        "body": """
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="kicker">The profession</p>
+      <h2>The <em>custode del territorio</em></h2>
+      <p>One person who can walk a slope, read what the instruments say about it, and keep those instruments working. The role joins three disciplines that are usually taught and employed apart.</p>
+    </div>
+    <p class="pull">Someone from the valley, trained to look after it.</p>
+  </div>
+  <div class="wrap">
+    <div class="cols">
+      <article class="card"><span class="num">01</span><h3>Hydraulics</h3><p>How water moves through a slope, a torrent or a catchment, and what it does to the ground.</p></article>
+      <article class="card"><span class="num">02</span><h3>Electronics</h3><p>Sensors, power and communications that keep working in snow, cold and remote terrain.</p></article>
+      <article class="card"><span class="num">03</span><h3>Geomatics</h3><p>Satellite and ground data, maps and analysis, turned into something a mayor or an engineer can use.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="kicker">The pathway</p>
+    <h2>From the classroom to the slope</h2>
+    <ol class="steps">
+      <li><div><h3>Secondary schools</h3><p>Technical and vocational schools in the valley bring real monitoring sites into the curriculum, with real data from slopes the students know.</p></div></li>
+      <li><div><h3>Universities</h3><p>Universities contribute teaching, scientific validation and a route into advanced study for those who want one.</p></div></li>
+      <li><div><h3>Training on the slope</h3><p>Short, practical courses in installation, data quality and running a network, on live sites. Certification is being designed with training partners.</p></div></li>
+      <li><div><h3>Work in the valley</h3><p>Trained people run the network in their own territory, through the local business network that set it up.</p></div></li>
+    </ol>
+    <p class="note">The pathway is in design. We will name schools, universities and training bodies once they agree to be named.</p>
+  </div>
+</section>
+
+<section class="green">
+  <div class="wrap">
+    <p class="kicker">Who gains</p>
+    <h2>A programme that stays local</h2>
+    <div class="cols four">
+      <article class="card on-dark"><h3>Young people</h3><p>A skilled job connected to the place they come from, and a reason to stay or come back.</p></article>
+      <article class="card on-dark"><h3>Schools and universities</h3><p>Live infrastructure to teach on, and a say in how the programme is built. They are founding partners, not suppliers of graduates.</p></article>
+      <article class="card on-dark"><h3>Territories</h3><p>Skills that remain after the project ends. The cost of switching on a site becomes local work and training.</p></article>
+      <article class="card on-dark"><h3>The network</h3><p>Each site trains the people who run the next one, so growth does not depend on bringing people in from outside.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Teach, train or take part.</h2>
+    <p>If you run a school, a course or a local business, or you are a young person who wants to work on mountain risk, write to us. We are building this with the people who will use it.</p>
+    <div class="btns"><a class="btn" href="%(mail_ng)s">Write to us</a><a class="btn ghost" href="/partner-with-us/">Partner with us</a></div>
+  </div>
+</section>""",
+    }
+
+
+def next_it():
+    return {
+        "title": "Nuova generazione | Smart Mountains",
+        "desc": "Un percorso per un nuovo mestiere alpino, il custode del territorio, costruito con scuole, università ed enti di formazione perché i giovani possano prendersi cura delle proprie valli.",
+        "hero": """
+<header class="page-hero">
+  %(contours)s
+  <div class="wrap">
+    <p class="eyebrow">Nuova generazione</p>
+    <h1>Nessun percorso unico porta a prendersi cura di un versante alpino.</h1>
+    <p class="lede">Idraulica, elettronica e geomatica si studiano, e si assumono, in luoghi diversi. Le valli hanno bisogno di persone che le sappiano unire, e i giovani che vorrebbero restare hanno bisogno di un motivo e di un percorso per farlo. Smart Mountains sta progettando quel percorso: un nuovo mestiere alpino, il <em>custode del territorio</em>.</p>
+  </div>
+</header>""",
+        "body": """
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Il mestiere</p>
+      <h2>Il <em>custode del territorio</em></h2>
+      <p>Una persona che sa percorrere un versante, leggere cosa dicono gli strumenti e mantenere quegli strumenti in funzione. Il ruolo unisce tre discipline che di solito si insegnano, e si impiegano, separatamente.</p>
+    </div>
+    <p class="pull">Una persona della valle, formata per prendersene cura.</p>
+  </div>
+  <div class="wrap">
+    <div class="cols">
+      <article class="card"><span class="num">01</span><h3>Idraulica</h3><p>Come l’acqua si muove in un versante, in un torrente o in un bacino, e cosa fa al terreno.</p></article>
+      <article class="card"><span class="num">02</span><h3>Elettronica</h3><p>Sensori, alimentazione e comunicazioni che continuano a funzionare con neve, freddo e in luoghi isolati.</p></article>
+      <article class="card"><span class="num">03</span><h3>Geomatica</h3><p>Dati satellitari e a terra, mappe e analisi, trasformati in qualcosa che un sindaco o un tecnico può usare.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="kicker">Il percorso</p>
+    <h2>Dall’aula al versante</h2>
+    <ol class="steps">
+      <li><div><h3>Scuole superiori</h3><p>Gli istituti tecnici e professionali della valle portano siti di monitoraggio reali nei programmi, con dati veri di versanti che gli studenti conoscono.</p></div></li>
+      <li><div><h3>Università</h3><p>Le università portano didattica, validazione scientifica e una strada verso studi avanzati per chi la vuole.</p></div></li>
+      <li><div><h3>Formazione sul campo</h3><p>Corsi brevi e pratici su installazione, qualità dei dati e gestione di una rete, su siti attivi. La certificazione è in corso di progettazione con i partner formativi.</p></div></li>
+      <li><div><h3>Lavoro in valle</h3><p>Le persone formate gestiscono la rete nel proprio territorio, attraverso la rete d’impresa locale che l’ha avviata.</p></div></li>
+    </ol>
+    <p class="note">Il percorso è in fase di progettazione. Indicheremo scuole, università ed enti di formazione quando avranno accettato di essere nominati.</p>
+  </div>
+</section>
+
+<section class="green">
+  <div class="wrap">
+    <p class="kicker">Chi ne beneficia</p>
+    <h2>Un programma che resta sul territorio</h2>
+    <div class="cols four">
+      <article class="card on-dark"><h3>Giovani</h3><p>Un lavoro qualificato legato al luogo da cui vengono, e un motivo per restare o tornare.</p></article>
+      <article class="card on-dark"><h3>Scuole e università</h3><p>Un’infrastruttura reale su cui insegnare e voce in capitolo nella costruzione del programma. Sono partner fondatori, non fornitori di diplomati.</p></article>
+      <article class="card on-dark"><h3>Territori</h3><p>Competenze che restano dopo la fine del progetto. Il costo di attivazione di un sito diventa lavoro e formazione locali.</p></article>
+      <article class="card on-dark"><h3>La rete</h3><p>Ogni sito forma le persone che gestiranno il successivo, così la crescita non dipende dal far arrivare persone da fuori.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Insegna, forma o partecipa.</h2>
+    <p>Se dirigi una scuola, un corso o un’impresa locale, o sei un giovane che vuole lavorare sul rischio in montagna, scrivici. Lo costruiamo con le persone che lo useranno.</p>
+    <div class="btns"><a class="btn" href="%(mail_ng)s">Scrivici</a><a class="btn ghost" href="/it/partner/">Collabora con noi</a></div>
+  </div>
+</section>""",
+    }
+
+
 # ---------------------------------------------------------------- layout
 
 PAGES = [
     # key, en path, it path, en builder, it builder
     ("home", "/", "/it/", home_en, home_it),
     ("about", "/about/", "/it/chi-siamo/", about_en, about_it),
+    ("next", "/next-generation/", "/it/nuova-generazione/", next_en, next_it),
     ("partner", "/partner-with-us/", "/it/partner/", partner_en, partner_it),
 ]
 
 
 def layout(lang, path, alt_path, page, current_idx):
     t = T[lang]
-    ctx = {"art": hero_art(), "contours": contour_art(), "fab": FAB, "mail": MAIL, "cal": CALENDLY}
+    ctx = {"art": hero_art(), "contours": contour_art(), "fab": FAB, "mail": MAIL, "cal": CALENDLY,
+           "mail_ng": "mailto:%s?subject=%s" % (MAIL, "Next%20generation" if lang == "en" else "Nuova%20generazione")}
     hero = page["hero"] % ctx
     body = page["body"] % ctx if "%(" in page["body"] else page["body"]
     en_path = path if lang == "en" else alt_path
