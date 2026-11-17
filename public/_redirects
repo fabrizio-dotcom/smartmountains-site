@@ -1,0 +1,13 @@
+# Old WordPress URLs
+/chi-siamo        /it/chi-siamo/  301
+/chi-siamo/       /it/chi-siamo/  301
+/en               /               301
+/en/              /               301
+/en/about         /about/         301
+/en/about/        /about/         301
+/en/partner-with-us   /partner-with-us/  301
+/en/partner-with-us/  /partner-with-us/  301
+/it/about         /it/chi-siamo/  301
+/it/about/        /it/chi-siamo/  301
+/it/partner-with-us   /it/partner/  301
+/it/partner-with-us/  /it/partner/  301
