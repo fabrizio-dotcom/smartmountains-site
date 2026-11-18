@@ -370,17 +370,6 @@ def about_en():
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <p class="kicker">Incubation</p>
-    <h2>Built with partners in the Alps</h2>
-    <div class="cols four">
-      <article class="card"><h3>Fab Campaigns, Winchester</h3><p>Partnership studio and incubator. <a href="%(fab)s" rel="noopener">fabcampaigns.com</a></p></article>
-      <article class="card"><h3>Imprese Favolose, Belluno</h3><p>Territorial incubator for Alpine climate technology.</p></article>
-    </div>
-  </div>
-</section>
-
 <section class="cta">
   <div class="wrap">
     <h2>This is built to work on a slope, not on a slide.</h2>
@@ -410,7 +399,7 @@ def about_it():
     <div>
       <p class="kicker">Perché qui</p>
       <h2>Perché vive dentro Fab Campaigns</h2>
-      <p>Fab Campaigns è uno studio di partnership e incubatore con sede a Winchester, nel Regno Unito. Costruisce gli accordi, la governance e le strutture condivise che permettono a organizzazioni con interessi diversi di lavorare su un unico bene.</p>
+      <p>Fab Campaigns è uno studio di partnership con sede a Winchester, nel Regno Unito. Costruisce gli accordi, la governance e le strutture condivise che permettono a organizzazioni con interessi diversi di lavorare su un unico bene.</p>
       <p>Smart Mountains applica questo metodo alle infrastrutture di monitoraggio nei territori di montagna. Riunisce un territorio, fornitori di tecnologia, enti di formazione e finanziatori attorno a un’unica rete e mantiene chiaro l’accordo per ciascuno.</p>
       <p><a href="%(fab)s" rel="noopener">Visita Fab Campaigns</a></p>
     </div>
@@ -440,17 +429,6 @@ def about_it():
       <article class="card on-dark"><span class="num">03</span><h3>Modelli per territorio</h3><p>I modelli sono addestrati sulla storia di ciascun luogo, calibrati sul campo e verificati con ciò che accade sul versante.</p></article>
     </div>
     <p class="note">Lavoriamo con produttori di sensori, fornitori di dati e specialisti di modellistica. Le collaborazioni si definiscono con accordi quadro, così ogni parte conosce il proprio ruolo e cosa condivide.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="kicker">Incubazione</p>
-    <h2>Costruita con partner nelle Alpi</h2>
-    <div class="cols four">
-      <article class="card"><h3>Fab Campaigns, Winchester</h3><p>Studio di partnership e incubatore. <a href="%(fab)s" rel="noopener">fabcampaigns.com</a></p></article>
-      <article class="card"><h3>Imprese Favolose, Belluno</h3><p>Incubatore territoriale per le tecnologie climatiche alpine.</p></article>
-    </div>
   </div>
 </section>
 
