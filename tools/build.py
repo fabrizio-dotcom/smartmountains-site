@@ -46,10 +46,10 @@ def path_fill(points, bottom=700, width=1440):
 
 
 def hero_art():
-    far = ridge(11, 380, 110)
-    mid = ridge(23, 450, 90)
-    near = ridge(37, 535, 70)
-    front = ridge(51, 650, 30, rough=0.5)
+    far = ridge(11, 470, 90)
+    mid = ridge(23, 520, 75)
+    near = ridge(37, 585, 55)
+    front = ridge(51, 668, 18, rough=0.5)
     # sensor markers placed on the near ridge, just below the crest
     picks = [int(len(near) * f) for f in (0.22, 0.41, 0.63, 0.82)]
     marks = []
@@ -63,12 +63,12 @@ def hero_art():
     line = " ".join("%s,%s" % (near[i][0], near[i][1] + 26) for i in picks)
     return (
         '<svg class="art" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">'
-        '<path d="%s" fill="#1E3D58"/>'
-        '<path d="%s" fill="#16304A"/>'
-        '<path d="%s" fill="#0F2238"/>'
+        '<path d="%s" fill="#16354F"/>'
+        '<path d="%s" fill="#112A42"/>'
+        '<path d="%s" fill="#0C1E34"/>'
         '<polyline points="%s" fill="none" stroke="#E07D2C" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 7"/>'
         "%s"
-        '<path d="%s" fill="#F6F4EF"/>'
+        '<path d="%s" fill="#0E4D6D"/>'
         "</svg>"
     ) % (path_fill(far), path_fill(mid), path_fill(near), line, "".join(marks), path_fill(front))
 
@@ -100,18 +100,18 @@ def contour_art():
     )
 
 
-LOGO = (
-    '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
-    '<path d="M3 31 L15 11 L21 21 L26 14 L37 31 Z" fill="none" stroke="#7FCBA4" stroke-width="2.2" stroke-linejoin="round"/>'
-    '<circle cx="26" cy="9" r="3.2" fill="#E07D2C"/></svg>'
-)
+LOGO = '<img src="/assets/sm-mark.png" width="48" height="30" alt="">'
 
-FAVICON = (
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
-    '<rect width="64" height="64" rx="12" fill="#0A1628"/>'
-    '<path d="M8 48 L24 20 L32 33 L40 23 L56 48 Z" fill="none" stroke="#7FCBA4" stroke-width="4" stroke-linejoin="round"/>'
-    '<circle cx="42" cy="14" r="5" fill="#E07D2C"/></svg>'
+# Fab Campaigns star: the supplied vector, shipped once as an inline symbol (brand guide sheet 13)
+STAR_SYMBOL = (
+    '<svg class="defs" aria-hidden="true" focusable="false"><symbol id="fc-star" viewBox="0 0 300 300">'
+    '<path d="M 298.00 150.00 Q 227.07 155.26 179.17 162.08 Q 193.34 185.91 220.47 220.47 Q 185.91 193.34 162.08 179.17 '
+    'Q 155.26 227.07 150.00 298.00 Q 144.74 227.07 137.92 179.17 Q 114.09 193.34 79.53 220.47 Q 106.66 185.91 120.83 162.08 '
+    'Q 72.93 155.26 2.00 150.00 Q 72.93 144.74 120.83 137.92 Q 106.66 114.09 79.53 79.53 Q 114.09 106.66 137.92 120.83 '
+    'Q 144.74 72.93 150.00 2.00 Q 155.26 72.93 162.08 120.83 Q 185.91 106.66 220.47 79.53 Q 193.34 114.09 179.17 137.92 '
+    'Q 227.07 144.74 298.00 150.00 Z"/></symbol></svg>'
 )
+STAR = '<svg class="star" aria-hidden="true" focusable="false"><use href="#fc-star"/></svg>'
 
 # ---------------------------------------------------------------- copy
 
@@ -125,6 +125,7 @@ T = {
         "skip": "Skip to content",
         "menu": "Menu",
         "tagline": "A Fab Campaigns concept",
+        "incubated": 'Incubated by <a href="%s" rel="noopener">Fab Campaigns</a> · Winchester, UK' % FAB,
         "footer_line": "Monitoring infrastructure for mountain territories, built with the people who live there.",
         "fab_link": "Fab Campaigns",
         "legal": "&copy; %s Fab Campaigns Ltd. Registered in England and Wales, company number 10302961." % YEAR,
@@ -139,6 +140,7 @@ T = {
         "skip": "Vai al contenuto",
         "menu": "Menu",
         "tagline": "Un concept di Fab Campaigns",
+        "incubated": 'Nata in <a href="%s" rel="noopener">Fab Campaigns</a> · Winchester, Regno Unito' % FAB,
         "footer_line": "Infrastrutture di monitoraggio per i territori di montagna, costruite con chi li abita.",
         "fab_link": "Fab Campaigns",
         "legal": "&copy; %s Fab Campaigns Ltd. Registrata in Inghilterra e Galles, numero 10302961." % YEAR,
@@ -156,26 +158,32 @@ def home_en():
 <header class="hero">
   %(art)s
   <div class="wrap">
-    <p class="eyebrow">A Fab Campaigns concept</p>
-    <h1>Mountain territories carry risk they cannot yet see.</h1>
+    <p class="eyebrow"><svg class="star" aria-hidden="true" focusable="false"><use href="#fc-star"/></svg>A Fab Campaigns concept</p>
+    <h1>Mountain territories carry risk <span class="accent">they cannot yet see.</span></h1>
     <p class="lede">Landslides, debris flows and failing infrastructure are moving faster than the monitoring built to watch them. Smart Mountains is a way to close that gap: monitoring infrastructure built and run with the territory, starting with slope movement in the Alps.</p>
     <div class="btns">
       <a class="btn" href="/partner-with-us/">Start a conversation</a>
       <a class="btn ghost" href="#approach">How it works</a>
     </div>
   </div>
-</header>""",
+</header>
+<div class="facts"><ul>
+  <li><b>3</b>Alpine regions</li>
+  <li><b>Infrastructure</b>not software</li>
+  <li><b>No data</b>sold, ever</li>
+  <li><b>EN · IT</b>built with the valley</li>
+</ul></div>""",
         "body": """
-<section id="problem">
-  <div class="wrap split">
+<section id="problem" class="white">
+  <div class="wrap">
     <div>
       <p class="kicker">The problem</p>
       <h2>Decisions are made on incomplete data</h2>
       <p class="measure">Municipalities, civil protection, park authorities and infrastructure operators make choices about roads, settlements and water with partial information. A satellite pass here, a manual survey there, a forecast that stops at the valley floor. Each source tells part of the story, and none of them was designed to work with the others.</p>
     </div>
-    <p class="pull">The data exists. The system that turns it into a local decision mostly does not.</p>
   </div>
 </section>
+<div class="quote-band"><div class="wrap"><p>“The data exists. The system that turns it into a local decision mostly does not.”</p></div></div>
 
 <section id="approach" class="alt">
   <div class="wrap">
@@ -241,26 +249,32 @@ def home_it():
 <header class="hero">
   %(art)s
   <div class="wrap">
-    <p class="eyebrow">Un concept di Fab Campaigns</p>
-    <h1>I territori di montagna convivono con rischi che ancora non riescono a vedere.</h1>
+    <p class="eyebrow"><svg class="star" aria-hidden="true" focusable="false"><use href="#fc-star"/></svg>Un concept di Fab Campaigns</p>
+    <h1>I territori di montagna convivono con rischi <span class="accent">che ancora non riescono a vedere.</span></h1>
     <p class="lede">Frane, colate detritiche e infrastrutture sotto stress si muovono più in fretta del monitoraggio costruito per osservarle. Smart Mountains è un modo per colmare questo vuoto: infrastrutture di monitoraggio costruite e gestite insieme al territorio, a partire dal movimento dei versanti sulle Alpi.</p>
     <div class="btns">
       <a class="btn" href="/it/partner/">Avvia un confronto</a>
       <a class="btn ghost" href="#approccio">Come funziona</a>
     </div>
   </div>
-</header>""",
+</header>
+<div class="facts"><ul>
+  <li><b>3</b>regioni alpine</li>
+  <li><b>Infrastruttura</b>non software</li>
+  <li><b>Nessun dato</b>venduto, mai</li>
+  <li><b>IT · EN</b>costruita con la valle</li>
+</ul></div>""",
         "body": """
-<section id="problema">
-  <div class="wrap split">
+<section id="problema" class="white">
+  <div class="wrap">
     <div>
       <p class="kicker">Il problema</p>
       <h2>Si decide con dati incompleti</h2>
       <p class="measure">Comuni, protezione civile, enti parco e gestori di infrastrutture decidono su strade, abitati e acqua con informazioni parziali. Un passaggio satellitare qui, un rilievo manuale là, una previsione che si ferma al fondovalle. Ogni fonte racconta una parte della storia e nessuna è stata pensata per funzionare con le altre.</p>
     </div>
-    <p class="pull">I dati esistono. Il sistema che li trasforma in una decisione locale, per lo più, no.</p>
   </div>
 </section>
+<div class="quote-band"><div class="wrap"><p>«I dati esistono. Il sistema che li trasforma in una decisione locale, per lo più, no.»</p></div></div>
 
 <section id="approccio" class="alt">
   <div class="wrap">
@@ -327,7 +341,7 @@ def about_en():
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">About</p>
-    <h1>A concept built inside Fab Campaigns</h1>
+    <h1>A concept built <span class="accent">inside Fab Campaigns</span></h1>
     <p class="lede">The technology to watch an Alpine slope is mature. The partnerships and local structures that put it to work are not. Fab Campaigns designs partnerships. Smart Mountains is where that work meets a physical problem.</p>
   </div>
 </header>""",
@@ -335,7 +349,7 @@ def about_en():
 <section>
   <div class="wrap split">
     <div>
-      <p class="kicker">Why here</p>
+      <p class="kicker"><svg class="star" aria-hidden="true" focusable="false"><use href="#fc-star"/></svg>Why here</p>
       <h2>Why it lives in Fab Campaigns</h2>
       <p>Fab Campaigns is a partnership studio and incubator based in Winchester, UK. It builds the agreements, governance and shared structures that let organisations with different interests work on one asset.</p>
       <p>Smart Mountains applies that method to monitoring infrastructure in mountain territories. It brings a territory, technology providers, training bodies and funders around a single network, and keeps the arrangement clear for each of them.</p>
@@ -389,7 +403,7 @@ def about_it():
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">Chi siamo</p>
-    <h1>Un concept nato dentro Fab Campaigns</h1>
+    <h1>Un concept nato <span class="accent">dentro Fab Campaigns</span></h1>
     <p class="lede">La tecnologia per osservare un versante alpino è matura. Mancano le alleanze e le strutture locali che la mettono al lavoro. Fab Campaigns progetta partnership. Smart Mountains è il punto in cui questo lavoro incontra un problema fisico.</p>
   </div>
 </header>""",
@@ -397,7 +411,7 @@ def about_it():
 <section>
   <div class="wrap split">
     <div>
-      <p class="kicker">Perché qui</p>
+      <p class="kicker"><svg class="star" aria-hidden="true" focusable="false"><use href="#fc-star"/></svg>Perché qui</p>
       <h2>Perché vive dentro Fab Campaigns</h2>
       <p>Fab Campaigns è uno studio di partnership con sede a Winchester, nel Regno Unito. Costruisce gli accordi, la governance e le strutture condivise che permettono a organizzazioni con interessi diversi di lavorare su un unico bene.</p>
       <p>Smart Mountains applica questo metodo alle infrastrutture di monitoraggio nei territori di montagna. Riunisce un territorio, fornitori di tecnologia, enti di formazione e finanziatori attorno a un’unica rete e mantiene chiaro l’accordo per ciascuno.</p>
@@ -451,7 +465,7 @@ def partner_en():
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">Partner with us</p>
-    <h1>Every territory is different.</h1>
+    <h1>Every territory <span class="accent">is different.</span></h1>
     <p class="lede">We do not deploy a generic platform. We build with local partners, around the risks of one specific place, and plan for the long term.</p>
   </div>
 </header>""",
@@ -502,7 +516,7 @@ def partner_it():
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">Collabora con noi</p>
-    <h1>Ogni territorio è diverso.</h1>
+    <h1>Ogni territorio <span class="accent">è diverso.</span></h1>
     <p class="lede">Non installiamo una piattaforma generica. Costruiamo con partner locali, attorno ai rischi di un luogo preciso, con una visione di lungo periodo.</p>
   </div>
 </header>""",
@@ -554,7 +568,7 @@ def next_en():
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">Next generation</p>
-    <h1>No single career path leads to looking after an Alpine slope.</h1>
+    <h1>No single career path leads <span class="accent">to looking after an Alpine slope.</span></h1>
     <p class="lede">Hydraulics, electronics and geomatics are taught, and employed, in separate places. Valleys need people who bring them together, and young people who would like to stay need a reason and a route to do it. Smart Mountains is designing that route: a new Alpine profession, the territory steward.</p>
   </div>
 </header>""",
@@ -623,7 +637,7 @@ def next_it():
   %(contours)s
   <div class="wrap">
     <p class="eyebrow">Nuova generazione</p>
-    <h1>Nessun percorso unico porta a prendersi cura di un versante alpino.</h1>
+    <h1>Nessun percorso unico porta <span class="accent">a prendersi cura di un versante alpino.</span></h1>
     <p class="lede">Idraulica, elettronica e geomatica si studiano, e si assumono, in luoghi diversi. Le valli hanno bisogno di persone che le sappiano unire, e i giovani che vorrebbero restare hanno bisogno di un motivo e di un percorso per farlo. Smart Mountains sta progettando quel percorso: un nuovo mestiere alpino, il <em>custode del territorio</em>.</p>
   </div>
 </header>""",
@@ -732,8 +746,9 @@ def layout(lang, path, alt_path, page, current_idx):
 <meta property="og:image" content="%(site)s/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A1628">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">%(jsonld)s</script>
 </head>
@@ -750,6 +765,10 @@ def layout(lang, path, alt_path, page, current_idx):
 %(hero)s
 %(body)s
 </main>
+<div class="incubation">
+  <div class="rule">%(star)s</div>
+  <p>%(incubated)s</p>
+</div>
 <footer class="site-footer">
   <div class="wrap">
     <div class="top">
@@ -763,6 +782,7 @@ def layout(lang, path, alt_path, page, current_idx):
     </div>
     <small>%(legal)s</small>
   </div>
+  %(star_symbol)s
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>
@@ -772,6 +792,7 @@ def layout(lang, path, alt_path, page, current_idx):
         "en": en_path, "it": it_path, "jsonld": jsonld, "skip": t["skip"], "home": t["home_url"],
         "logo": LOGO, "menu": t["menu"], "nav": nav, "hero": hero, "body": body,
         "tagline": t["tagline"], "footer_line": t["footer_line"], "legal": t["legal"],
+        "star": STAR, "star_symbol": STAR_SYMBOL, "incubated": t["incubated"],
         "flinks": '<a href="mailto:%s">%s</a><a href="%s" rel="noopener">fabcampaigns.com</a><a href="%s">%s</a>' % (
             MAIL, MAIL, FAB, alt_path, t["other_label"]),
     }
@@ -787,7 +808,6 @@ def main():
     for idx, (key, en_path, it_path, en_fn, it_fn) in enumerate(PAGES):
         write(en_path + "index.html", layout("en", en_path, it_path, en_fn(), idx))
         write(it_path + "index.html", layout("it", it_path, en_path, it_fn(), idx))
-    write("/favicon.svg", FAVICON)
 
     urls = []
     for _, en_path, it_path, _, _ in PAGES:
@@ -806,7 +826,7 @@ def main():
     write("/404.html", """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Page not found | Smart Mountains</title><meta name="robots" content="noindex">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css"></head>
+<link rel="icon" href="/favicon.png" type="image/png"><link rel="stylesheet" href="/assets/style.css"></head>
 <body><main id="main"><header class="page-hero"><div class="wrap">
 <p class="eyebrow">404</p><h1>This slope is not on our map.</h1>
 <p class="lede">The page you were looking for has moved or does not exist. <a href="/">Back to the home page</a> or <a href="/it/">torna alla home in italiano</a>.</p>
@@ -838,7 +858,7 @@ def main():
           "/assets/*\n"
           "  Cache-Control: public, max-age=31536000, immutable\n"
           "\n"
-          "/favicon.svg\n"
+          "/favicon.png\n"
           "  Cache-Control: public, max-age=86400\n")
     print("Built", len(PAGES) * 2, "pages into", OUT)
 
